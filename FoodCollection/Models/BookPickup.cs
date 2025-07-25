@@ -18,8 +18,7 @@ namespace FoodCollection.Models
         [ForeignKey("CustomerId")]
         public Customer Customer { get; set; }
         public ICollection<BookPickupDetail> BookPickupDetail { get; set; }
-        public ICollection<Payment> Payment { get; set; }
-        public ICollection<Pickup> Pickup { get; set; }
+        
 
 
     }

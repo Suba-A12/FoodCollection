@@ -15,6 +15,6 @@ namespace FoodCollection.Models
         public int StaffId { get; set; }
         [ForeignKey("StaffId")]
         public Staff Staff { get; set; }
-        public ICollection<DeliveryInfo> DeliveryInfo { get; set; }
+
     }
 }
