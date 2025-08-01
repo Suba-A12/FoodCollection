@@ -28,13 +28,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FoodCollection.a550c1fvsu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a550c1fvsu"},{"Name":"integrity","Value":"sha256-Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4="},{"Name":"label","Value":"_content/FoodCollection/FoodCollection.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 01:59:15 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 01 Aug 2025 04:32:29 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FoodCollection/FoodCollection.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\FoodCollection.a550c1fvsu.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 01:59:15 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1132"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Dvo9ug7KcukupOGyrLk0AOd4AMJctuftW5weMvb0Fu4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 01 Aug 2025 04:32:29 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/FoodCollection/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

@@ -18,7 +18,12 @@ namespace FoodCollection.Controllers
         {
             _context = context;
         }
-
+        public async Task<IActionResult> MyBookings()
+        {
+            var username = User.Identity.Name;
+            var getBookings = await _context.BookPickup.Include(b => b.Customer).Where(b => b.Customer.Email == username).ToListAsync();
+            return View(getBookings);
+        }
         // GET: BookPickups
         public async Task<IActionResult> Index()
         {
@@ -59,12 +64,12 @@ namespace FoodCollection.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("BookPickupId,EventName,EventAddress,BookDate,BookTime,BookStatus,TotalAmount,PaymentStatus,CustomerId")] BookPickup bookPickup)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(bookPickup);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            //}
             ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerId", bookPickup.CustomerId);
             return View(bookPickup);
         }

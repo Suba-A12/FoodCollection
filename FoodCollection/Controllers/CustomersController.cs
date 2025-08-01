@@ -19,6 +19,12 @@ namespace FoodCollection.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> MyProfile()
+        {
+            string username = User.Identity.Name;
+            var getProfile = await _context.Customer.Where(c => c.Email == username).FirstOrDefaultAsync();
+            return View(getProfile);
+        }
         // GET: Customers
         public async Task<IActionResult> Index()
         {

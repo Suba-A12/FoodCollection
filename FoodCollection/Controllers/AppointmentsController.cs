@@ -18,7 +18,12 @@ namespace FoodCollection.Controllers
         {
             _context = context;
         }
-
+        public async Task<IActionResult> MyAppointments()   
+        {
+            var username = User.Identity.Name;
+            var getAppointments = await _context.Appointment.Include(b => b.Customer).Include(s => s.Staff).Where(b => b.Customer.Email == username).ToListAsync();
+            return View(getAppointments);
+        }
         // GET: Appointments
         public async Task<IActionResult> Index()
         {
@@ -61,12 +66,12 @@ namespace FoodCollection.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("AppointmentId,Date,Time,Status,CustomerId,StaffId")] Appointment appointment)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(appointment);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            //}
             ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerId", appointment.CustomerId);
             ViewData["StaffId"] = new SelectList(_context.Staff, "StaffId", "StaffId", appointment.StaffId);
             return View(appointment);
